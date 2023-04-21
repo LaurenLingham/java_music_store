@@ -7,8 +7,8 @@ public abstract class Instrument extends SaleItem implements IPlay, ISell {
     private InstrumentType type;
     private String manufacturer;
 
-    public Instrument(double boughtPrice, double salePrice, InstrumentType type, String manufacturer) {
-        super(boughtPrice, salePrice);
+    public Instrument(double purchasePrice, double salePrice, InstrumentType type, String manufacturer) {
+        super(purchasePrice, salePrice);
         this.type = type;
         this.manufacturer = manufacturer;
     }

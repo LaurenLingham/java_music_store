@@ -26,7 +26,7 @@ public class TrumpetTest {
 
     @Test
     public void hasBoughtPrice() {
-        assertEquals(2200, trumpet.getBoughtPrice(), 1);
+        assertEquals(2200, trumpet.getPurchasePrice(), 1);
     }
 
     @Test

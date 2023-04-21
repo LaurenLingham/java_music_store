@@ -26,7 +26,7 @@ public class GuitarTest {
 
     @Test
     public void hasBoughtPrice() {
-        assertEquals(450, guitar.getBoughtPrice(), 1);
+        assertEquals(450, guitar.getPurchasePrice(), 1);
     }
 
     @Test

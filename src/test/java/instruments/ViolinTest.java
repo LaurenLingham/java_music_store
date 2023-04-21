@@ -26,7 +26,7 @@ public class ViolinTest {
 
     @Test
     public void hasBoughtPrice() {
-        assertEquals(1500, violin.getBoughtPrice(), 1);
+        assertEquals(1500, violin.getPurchasePrice(), 1);
     }
 
     @Test

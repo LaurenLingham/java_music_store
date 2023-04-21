@@ -26,7 +26,7 @@ public class DrumsetTest {
 
     @Test
     public void hasBoughtPrice() {
-        assertEquals(1300, drumset.getBoughtPrice(), 1);
+        assertEquals(1300, drumset.getPurchasePrice(), 1);
     }
 
     @Test

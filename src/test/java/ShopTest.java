@@ -8,6 +8,7 @@ import static org.junit.Assert.*;
 public class ShopTest {
 
     Shop shop;
+    Shop shop2;
     Guitar guitar;
     Drumset drumset;
 
@@ -15,6 +16,7 @@ public class ShopTest {
     public void before() {
 
         shop = new Shop(5000);
+        shop2 = new Shop(1000);
         guitar = new Guitar(450, 749.99, "Fender", 6, "electric", "sunburst");
         drumset = new Drumset("Zildjian", 1300, 2249.99, 7, "black");
         }
@@ -60,5 +62,11 @@ public class ShopTest {
     public void canPurchaseItem() {
         shop.purchaseItem(drumset);
         assertEquals(2750.01, shop.getTill(), 0.01);
+    }
+
+    @Test
+    public void cannotPurchaseItemWithInsufficientTillBalance() {
+        shop2.purchaseItem(drumset);
+        assertEquals(0, shop2.getNumberOfItemsInStock());
     }
 }

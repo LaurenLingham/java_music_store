@@ -26,7 +26,7 @@ public class FluteTest {
 
     @Test
     public void hasBoughtPrice() {
-        assertEquals(600, flute.getBoughtPrice(), 1);
+        assertEquals(600, flute.getPurchasePrice(), 1);
     }
 
     @Test

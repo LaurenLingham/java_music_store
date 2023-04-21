@@ -4,17 +4,17 @@ import behaviours.ISell;
 
 public abstract class SaleItem implements ISell {
 
-    private double boughtPrice;
+    private double purchasePrice;
     private double salePrice;
 
-    public SaleItem(double boughtPrice, double salePrice) {
-        this.boughtPrice = boughtPrice;
+    public SaleItem(double purchasePrice, double salePrice) {
+        this.purchasePrice = purchasePrice;
         this.salePrice = salePrice;
     }
 
     @Override
-    public double getBoughtPrice() {
-        return boughtPrice;
+    public double getPurchasePrice() {
+        return purchasePrice;
     }
 
     @Override
@@ -28,6 +28,6 @@ public abstract class SaleItem implements ISell {
 
     @Override
     public double calculateMarkup() {
-        return salePrice - boughtPrice;
+        return salePrice - purchasePrice;
     }
 }

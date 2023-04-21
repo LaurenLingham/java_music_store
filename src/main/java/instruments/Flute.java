@@ -4,8 +4,8 @@ public class Flute extends Instrument {
 
     private String material;
 
-    public Flute(double boughtPrice, double salePrice, String manufacturer, String material) {
-        super(boughtPrice, salePrice, InstrumentType.WOODWIND, manufacturer);
+    public Flute(double purchasePrice, double salePrice, String manufacturer, String material) {
+        super(purchasePrice, salePrice, InstrumentType.WOODWIND, manufacturer);
         this.material = material;
     }
 

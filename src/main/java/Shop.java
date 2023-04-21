@@ -13,7 +13,7 @@ public class Shop {
     }
 
     public ArrayList<ISell> getStock() {
-        return stock;
+        return this.stock;
     }
 
     public int getNumberOfItemsInStock() {
@@ -34,7 +34,7 @@ public class Shop {
 
     public double potentialProfit() {
         double totalProfit = 0;
-        for (ISell item : getStock()) {
+        for (ISell item : this.stock) {
             double markup = item.calculateMarkup();
             totalProfit += markup;
         }
@@ -42,14 +42,14 @@ public class Shop {
     }
 
     public void sellItem(ISell item) {
-        if (this.till >= item.getBoughtPrice()) {
-            removeItemFromStock(item);
-            this.till += item.getSalePrice();
-        }
+        this.till += item.getSalePrice();
+        removeItemFromStock(item);
     }
 
     public void purchaseItem(ISell item) {
-        addItemToStock(item);
-        this.till -= item.getSalePrice();
+        if (this.till >= item.getPurchasePrice()) {
+            addItemToStock(item);
+            this.till -= item.getSalePrice();
+        }
     }
 }

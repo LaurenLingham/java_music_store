@@ -5,8 +5,8 @@ public class Drumset extends Instrument{
     private int numberOfDrums;
     private String colour;
 
-    public Drumset(String manufacturer, double boughtPrice, double salePrice, int numberOfDrums, String colour) {
-        super(boughtPrice, salePrice, InstrumentType.PERCUSSION, manufacturer);
+    public Drumset(String manufacturer, double purchasePrice, double salePrice, int numberOfDrums, String colour) {
+        super(purchasePrice, salePrice, InstrumentType.PERCUSSION, manufacturer);
         this.numberOfDrums = numberOfDrums;
         this.colour = colour;
     }
